@@ -3,6 +3,7 @@
     "groupId": 1234,
     "goal": "주 3회 헬스장 가기",
     "totalChallangeDays": 17,
+    "succedDays": 10,
     "leftDays": 7,
     "prize": "iPad Air"
   }

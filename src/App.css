@@ -4,7 +4,11 @@
   padding: 2rem;
   text-align: center;
 }
-
+p {
+  font-family: Pretendard;
+  font-style: normal;
+  line-height: normal;
+}
 .logo {
   height: 6em;
   padding: 1.5em;

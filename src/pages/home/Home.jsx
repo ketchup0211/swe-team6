@@ -17,7 +17,7 @@ function Home() {
     <div>
       <div>
         <MissionHeader
-          succedDays={data.totalChallangeDays - data.leftDays}
+          succedDays={data.succedDays}
           leftDays={data.leftDays}
           goal={data.goal}
           prize={data.prize}
