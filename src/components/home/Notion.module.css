@@ -1,0 +1,20 @@
+#container {
+  display: flex;
+  width: 350px;
+  padding: 8px 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background: rgba(255, 245, 198, 0.7);
+}
+
+#notion_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.text {
+  color: rgba(28, 28, 28, 0.7);
+  font-size: 12px;
+  font-weight: 500;
+}

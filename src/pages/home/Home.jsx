@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import MissionHeader from "../../components/home/missionHeader";
 import MemberInfo from "../../components/home/MemberInfo";
+import Notion from "../../components/home/Notion";
 
 function Home() {
   const [data, setData] = useState({
@@ -30,9 +31,7 @@ function Home() {
           prize={data.prize}
         />
         <MemberInfo members={data.members} />
-        <div>
-          <p>공지 : 다들 잊지 말고 힘내봅시다!</p>
-        </div>
+        <Notion notion={data.notion} />
         <div>
           <p>캐릭터 컨테이너</p>
           <p>개별 캐릭터 상태, 캐릭터, 이름</p>
