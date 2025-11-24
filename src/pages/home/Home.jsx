@@ -4,6 +4,7 @@ import MemberInfo from "../../components/home/MemberInfo";
 import Notion from "../../components/home/Notion";
 import styles from "./Home.module.css";
 import CharacterGroup from "../../components/home/CharacterGroup";
+import Calendar from "../../components/home/Calendar";
 
 function Home() {
   const [data, setData] = useState({
@@ -37,9 +38,7 @@ function Home() {
       <div>
         <p>인증 사진 모아보기</p>
       </div>
-      <div>
-        <p>캘린더 보기</p>
-      </div>
+      <Calendar />
     </div>
   );
 }
