@@ -1,0 +1,8 @@
+#container {
+  background: linear-gradient(180deg, #fff5c6 0%, rgba(255, 245, 198, 0) 100%);
+  padding: 100px 20px 20px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import MissionHeader from "../../components/home/missionHeader";
 import MemberInfo from "../../components/home/MemberInfo";
 import Notion from "../../components/home/Notion";
+import styles from "./Home.module.css";
 
 function Home() {
   const [data, setData] = useState({
@@ -22,26 +23,24 @@ function Home() {
       });
   }, []);
   return (
-    <div>
+    <div id={styles.container}>
+      <MissionHeader
+        succedDays={data.succedDays}
+        leftDays={data.leftDays}
+        goal={data.goal}
+        prize={data.prize}
+      />
+      <MemberInfo members={data.members} />
+      <Notion notion={data.notion} />
       <div>
-        <MissionHeader
-          succedDays={data.succedDays}
-          leftDays={data.leftDays}
-          goal={data.goal}
-          prize={data.prize}
-        />
-        <MemberInfo members={data.members} />
-        <Notion notion={data.notion} />
-        <div>
-          <p>캐릭터 컨테이너</p>
-          <p>개별 캐릭터 상태, 캐릭터, 이름</p>
-        </div>
-        <div>
-          <p>인증 사진 모아보기</p>
-        </div>
-        <div>
-          <p>캘린더 보기</p>
-        </div>
+        <p>캐릭터 컨테이너</p>
+        <p>개별 캐릭터 상태, 캐릭터, 이름</p>
+      </div>
+      <div>
+        <p>인증 사진 모아보기</p>
+      </div>
+      <div>
+        <p>캘린더 보기</p>
       </div>
     </div>
   );

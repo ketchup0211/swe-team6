@@ -8,7 +8,7 @@
   background: rgba(255, 245, 198, 0.7);
 }
 
-#notion_container {
+#notionContainer {
   display: flex;
   align-items: center;
   gap: 10px;
