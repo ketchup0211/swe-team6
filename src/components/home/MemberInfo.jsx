@@ -10,7 +10,7 @@ function MemberInfo({ members = [] }) {
       </div>
       {members.map((member, idx) => (
         <div key={idx} className={styles.profile}>
-          <p>개인 프로필 사진</p>
+          <BaseUserIcon />
           <p>{member}</p>
         </div>
       ))}
