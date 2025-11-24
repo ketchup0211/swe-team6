@@ -3,6 +3,7 @@ import MissionHeader from "../../components/home/missionHeader";
 import MemberInfo from "../../components/home/MemberInfo";
 import Notion from "../../components/home/Notion";
 import styles from "./Home.module.css";
+import CharacterGroup from "../../components/home/CharacterGroup";
 
 function Home() {
   const [data, setData] = useState({
@@ -32,10 +33,7 @@ function Home() {
       />
       <MemberInfo members={data.members} />
       <Notion notion={data.notion} />
-      <div>
-        <p>캐릭터 컨테이너</p>
-        <p>개별 캐릭터 상태, 캐릭터, 이름</p>
-      </div>
+      <CharacterGroup />
       <div>
         <p>인증 사진 모아보기</p>
       </div>
