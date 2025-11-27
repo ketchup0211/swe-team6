@@ -3,7 +3,7 @@ export default function Button({ name, url }) {
   return (
     <div>
       <Link to={url}>
-        <button type="button">Go to {name}</button>
+        <button type="button">{name}</button>
       </Link>
     </div>
   );
