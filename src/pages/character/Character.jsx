@@ -7,7 +7,7 @@ import Button from "../../components/ui/Button";
 function Character() {
   return (
     <div className={styles.container}>
-      <div className="characterContainer" id={styles.background}>
+      <div className="characterContainer">
         <div className={styles.gotoContainer}>
           <div className={styles.gotoButtons}>
             <span>
@@ -28,9 +28,8 @@ function Character() {
               className={styles.pointIcon}
               src={pointIcon}
               alt="point-icon"
-              width="20"
             />
-            <p>usr point data</p>
+            <p className={styles.point}>usr point data</p>
           </div>
         </div>
         <div>
