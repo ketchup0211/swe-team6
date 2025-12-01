@@ -5,6 +5,7 @@ import pointIcon from "../../assets/point-icon.png";
 
 import ShortcutButton from "../../components/character/ShortcutButton";
 import Avatar from "../../components/character/Avatar";
+import ContentContainer from "../../components/character/contentContainer";
 function Character() {
   const alert = [""];
   const userPoint = 144;
@@ -27,9 +28,7 @@ function Character() {
         </div>
         <Avatar alert={alert} />
       </div>
-      <div>
-        <p>bottom bar</p>
-      </div>
+      <ContentContainer />
     </div>
   );
 }
