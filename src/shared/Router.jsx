@@ -9,7 +9,6 @@ import MyChallenge from "../pages/my-challenge/MyChallenge";
 const Router = () => {
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/character" element={<Character />} />
