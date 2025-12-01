@@ -1,11 +1,20 @@
 .avatarSection {
-  margin-top: 12px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
 }
 
+.avatarContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.avatarShade {
+  position: inherit;
+  top: -55px;
+}
 /* 항상 같은 높이를 유지하도록 높이 고정 */
 .messageBubbleContainer {
   display: flex;
@@ -50,7 +59,8 @@
 }
 
 .avatar {
-  width: 230px;
+  width: 250px;
+  z-index: 1;
   height: auto;
   object-fit: contain;
 }
