@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0px 20px 0px 20px;
+}
+
+.index {
+  display: flex;
+  width: 27%;
+  padding: 14px 32px 14px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px 20px 0 0;
+  background: #fff;
+}
+
+.contentContainer {
+  background: #fff;
+  padding: 30px 20px 20px;
+  width: 100%;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  gap: 16px;
+}
+
+.contentTitle {
+  display: flex;
+  width: 156px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.textEmphasize {
+  color: rgba(255, 103, 1, 0.7);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+}
+
+.textBold {
+  color: rgba(28, 28, 28, 0.9);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+}

@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 590px;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../assets/avatar/background/background-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30px 20px;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.shortcutContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pointContainer {
+  display: inline-flex;
+  padding: 4px 8px 4px 6px;
+  align-items: center;
+  gap: 4px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2px);
+}
+
+.pointIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+}
+
+.point {
+  color: var(--Black-900, #1c1c1c);
+  font-size: 14px;
+  font-weight: 500;
+}
