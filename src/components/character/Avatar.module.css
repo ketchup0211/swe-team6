@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
+  margin-top: 40px;
 }
 
 /* 더 이상 absolute 쓸 필요 없음 */
