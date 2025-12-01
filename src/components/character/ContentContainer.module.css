@@ -1,3 +1,18 @@
+.container {
+  position: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.index {
+  width: 250px;
+
+  border-radius: 610px;
+  background: black;
+}
+
 .contentContainer {
   flex: 1;
   background: #fff;

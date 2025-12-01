@@ -1,43 +1,47 @@
-.avatarSection {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.avatarContainer {
-  position: relative;
-  display: inline-block;
-}
-
-.avatarShade {
-  position: inherit;
-  top: -55px;
-}
-/* 항상 같은 높이를 유지하도록 높이 고정 */
-.messageBubbleContainer {
+/* 아치 영역 안에서 아바타 전체를 중앙에 놓는 래퍼 */
+.avatarWrapper {
+  /* 부모(Character 섹션)에서 높이만 정해주면 됨 */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 12px;
 }
 
-/* 메시지가 없을 때: 공간은 남기되, 안 보이게만 처리 */
-.messageBubbleHidden {
-  visibility: hidden; /* layout 유지 + 화면에서만 숨김 */
+/* 더 이상 absolute 쓸 필요 없음 */
+.avatarSection {
+  /* 이 클래스는 안 써도 되지만, 혹시 다른 데서 쓰면 위치 용도 아님 */
 }
 
-/* 말풍선 박스 */
+/* 말풍선 + 꼬리 */
+.messageBubbleContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
 .messageBubble {
+  position: relative; /* 꼬리 기준 */
   text-align: center;
-  padding: 10px 14px;
+  padding: 10px 14px 14px;
 
   background: #ffffff;
   border-radius: 14px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+}
 
-  position: relative;
+.messagePoint {
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+}
+
+/* 메시지가 없을 때: 자리까지 없애고 싶으면 그냥 렌더링 안 함(hasMessage && ...) */
+/* 자리만 유지하고 숨기고 싶으면 visibility 쓰는 예전 방식 그대로 써도 됨 */
+/* 메시지가 없을 때: 공간은 남기되, 안 보이게만 처리 */
+.messageBubbleHidden {
+  visibility: hidden; /* layout 유지 + 화면에서만 숨김 */
 }
 
 .messageName {
@@ -58,9 +62,27 @@
   letter-spacing: -0.5px;
 }
 
+/* 병아리 + 그림자 묶음 */
+.avatarContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* 병아리 이미지 */
 .avatar {
-  width: 250px;
-  z-index: 1;
+  width: 250px; /* 여기 값 마음대로 바꿔도 가운데 유지됨 */
   height: auto;
   object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+
+/* 발 그림자 */
+.avatarShade {
+  position: absolute;
+  left: 50%;
+  bottom: -50px; /* 발 조금 아래 */
+  transform: translateX(-50%);
+  z-index: 0;
 }
