@@ -1,0 +1,28 @@
+/*  button default setting */
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  color: rgba(28, 28, 28, 0.8);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.48px;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/*  icon size def */
+.gotoIcon {
+  width: 47px;
+  height: 47px;
+  aspect-ratio: 1/1;
+}
