@@ -1,12 +1,15 @@
+/* root 컨테이너 설정 */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
 }
 
+/* 공통 스타일 */
 body {
   -ms-overflow-style: none;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
