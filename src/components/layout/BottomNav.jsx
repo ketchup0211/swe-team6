@@ -14,7 +14,11 @@ export default function BottomNav() {
       <Button
         name={"홈"}
         url={"/character"}
-        isActive={currentPath === "/character"}
+        isActive={
+          currentPath === "/character" ||
+          currentPath === "/my-challenge" ||
+          currentPath === "/create-challenge"
+        }
         icon={home}
       />
       <Button
