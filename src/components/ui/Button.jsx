@@ -7,7 +7,7 @@ export default function Button({
   icon = null, // 기본 아이콘
   activeIcon = null, // 활성화 아이콘 (선택)
   iconStyle = null,
-  isActive = false, // 지금 탭이 활성화인지 여부
+  isActive = true, // 지금 탭이 활성화인지 여부
 }) {
   // 활성화 상태면 activeIcon이 있으면 그걸 쓰고, 없으면 기존 icon 사용
   const iconSrc = isActive && activeIcon ? activeIcon : icon;
