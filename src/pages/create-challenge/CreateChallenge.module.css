@@ -1,0 +1,10 @@
+.createChallenge {
+  width: 100%;
+}
+
+.container {
+  padding: 26px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}

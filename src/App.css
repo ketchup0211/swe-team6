@@ -1,12 +1,19 @@
+/* root 컨테이너 설정 */
+:root {
+  --bottom-nav-height: 80px; /* 대략 padding 포함 70~80 정도 */
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
 }
 
+/* 공통 스타일 */
 body {
   -ms-overflow-style: none;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -15,4 +22,8 @@ p {
   font-family: Pretendard;
   font-style: normal;
   line-height: normal;
+}
+
+* {
+  box-sizing: border-box; /* padding 포함해서 width 유지 */
 }

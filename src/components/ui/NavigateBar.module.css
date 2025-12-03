@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 20px 16px 20px;
+  margin-top: 46px;
+}
+
+.navigateButton {
+  position: absolute;
+  left: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+
+/* 오른쪽 + 버튼 래퍼 */
+.rightButton {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}

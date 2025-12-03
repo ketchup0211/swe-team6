@@ -1,0 +1,15 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* 가운데 정렬용 옵션 있으면 여기서 */
+}
+
+/* 실제 스크롤 되는 영역 */
+.contents {
+  flex: 1;
+}
+
+.bottomNav {
+  flex-shrink: 0;
+}

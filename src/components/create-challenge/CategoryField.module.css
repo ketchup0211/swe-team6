@@ -1,0 +1,54 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* "카테고리" 텍스트 */
+.label {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1c1c1c;
+  text-align: left;
+}
+
+/* 칩들을 감싸는 영역 */
+.chipContainer {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 10px 8px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+/* 기본 칩 스타일 */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+
+  padding: 6px 10px;
+  border-radius: 8px;
+
+  border: none;
+  background: rgba(255, 103, 1, 0.1);
+  color: rgba(28, 28, 28, 0.4);
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+/* 선택된 칩 */
+.chipActive {
+  background: #ff6701;
+  color: #ffffff;
+}
+
+/* X 표시 */
+.close {
+  width: 16px;
+  height: 16px;
+}

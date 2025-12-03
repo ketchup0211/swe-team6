@@ -14,7 +14,7 @@ function Character() {
       <div className="characterContainer">
         <div className={styles.topContainer}>
           <div className={styles.shortcutContainer}>
-            <ShortcutButton name={"나의 도전"} url={"/"} />
+            <ShortcutButton name={"나의 도전"} url={"/my-challenge"} />
             <ShortcutButton name={"공지"} url={"/"} />
           </div>
           <div className={styles.pointContainer}>
