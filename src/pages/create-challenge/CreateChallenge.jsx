@@ -9,6 +9,8 @@ import TitleField from "../../components/create-challenge/TitleField";
 import CategoryField from "../../components/create-challenge/CategoryField";
 import FriendField from "../../components/create-challenge/FriendField";
 
+import ChallengePeriod from "../../components/create-challenge/ChallengePeriod";
+
 function CreateChallenge() {
   // 1. 현재 몇 단계인지 기억하는 변수 (0부터 시작)
   const [step, setStep] = useState(0);
@@ -38,16 +40,15 @@ function CreateChallenge() {
         return (
           // 2단계 화면
           <>
-            <div className={styles.description}>보상을 고르는 화면입니다.</div>
+            <ChallengePeriod />
+            <div className={styles.description}>날짜를 고르는 화면입니다.</div>
           </>
         );
       case 2:
         return (
           // 3단계 화면
           <>
-            <div className={styles.description}>
-              친구랑 결제하는 화면입니다.
-            </div>
+            <div className={styles.description}>보상을 고르는 화면입니다.</div>
           </>
         );
       default:
