@@ -2,10 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/home/Home";
 import Profile from "../pages/profile/Profile";
 import BottomNav from "../components/layout/BottomNav";
-import Header from "../components/layout/Header";
 import Character from "../pages/character/Character";
 import MyChallenge from "../pages/my-challenge/MyChallenge";
-import CreateChallenge from "../pages/create-challeng/CreateChallenge";
+import CreateChallenge from "../pages/create-challenge/CreateChallenge";
 
 const Router = () => {
   return (
