@@ -3,6 +3,7 @@ import styles from "./CreateChallenge.module.css";
 import NavigateBar from "../../components/ui/NavigateBar";
 import CategoryField from "../../components/create-challenge/CategoryField";
 import TitleField from "../../components/create-challenge/TitleField";
+import FriendField from "../../components/create-challenge/FriendField";
 
 function CreateChallenge() {
   const [title, setTitle] = useState("");
@@ -12,15 +13,7 @@ function CreateChallenge() {
       <div className={styles.container}>
         <TitleField value={title} onChange={(e) => setTitle(e.target.value)} />
         <CategoryField />
-        <div>
-          <p>함께할 친구</p>
-          <div></div>
-          <input
-            type="text"
-            placeholder="친구 이름을 검색하세요"
-            maxLength={15}
-          />
-        </div>
+        <FriendField />
       </div>
     </div>
   );
