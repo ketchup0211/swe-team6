@@ -5,8 +5,7 @@ import NavigateBar from "../../components/ui/NavigateBar";
 function CreateChallenge() {
   return (
     <div>
-      <NavigateBar />
-      <p>CreateChallengePage</p>
+      <NavigateBar title={"도전 생성하기"} disableCreateBtn={true} />
     </div>
   );
 }

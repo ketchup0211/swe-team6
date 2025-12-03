@@ -5,8 +5,7 @@ import NavigateBar from "../../components/ui/NavigateBar";
 function MyChallenge() {
   return (
     <div>
-      <p>mychallengePage</p>
-      <NavigateBar />
+      <NavigateBar title={"지금 진행중인 도전"} />
     </div>
   );
 }
