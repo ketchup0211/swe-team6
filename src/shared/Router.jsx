@@ -5,6 +5,7 @@ import BottomNav from "../components/layout/BottomNav";
 import Header from "../components/layout/Header";
 import Character from "../pages/character/Character";
 import MyChallenge from "../pages/my-challenge/MyChallenge";
+import CreateChallenge from "../pages/create-challeng/CreateChallenge";
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
         <Route path="/character" element={<Character />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/my-challenge" element={<MyChallenge />} />
+        <Route path="/create-challenge" element={<CreateChallenge />} />
       </Routes>
       <BottomNav />
     </BrowserRouter>

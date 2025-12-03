@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import styles from "./MyChallenge.module.css";
+import styles from "./CreateChallenge.module.css";
 import NavigateBar from "../../components/ui/NavigateBar";
 
-function MyChallenge() {
+function CreateChallenge() {
   return (
     <div>
-      <p>mychallengePage</p>
       <NavigateBar />
+      <p>CreateChallengePage</p>
     </div>
   );
 }
 
-export default MyChallenge;
+export default CreateChallenge;
