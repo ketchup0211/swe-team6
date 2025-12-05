@@ -5,7 +5,7 @@ import pointIcon from "../../assets/point-icon.png";
 
 import ShortcutButton from "../../components/character/ShortcutButton";
 import Avatar from "../../components/character/Avatar";
-import ContentContainer from "../../components/character/contentContainer";
+import ContentContainer from "../../components/character/ContentContainer";
 function Character() {
   const alert = [""];
   const userPoint = 144;
