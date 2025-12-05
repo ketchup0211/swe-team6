@@ -9,28 +9,26 @@ import TitleField from "../../components/create-challenge/TitleField";
 import CategoryField from "../../components/create-challenge/CategoryField";
 import FriendField from "../../components/create-challenge/FriendField";
 import ChallengePeriod from "../../components/create-challenge/ChallengePeriod";
-
-// [NEW] 방금 만든 보상 선택 컴포넌트 import
 import RewardSelection from "../../components/create-challenge/RewardSelection";
+
+// [NEW] 방금 만든 결제 화면 import
+import ChallengePayment from "../../components/create-challenge/ChallengePayment";
 
 function CreateChallenge() {
   const [step, setStep] = useState(0);
   const navigate = useNavigate();
-
-  // [NEW] 선택된 보상을 저장할 변수
   const [selectedReward, setSelectedReward] = useState(null);
 
   const titles = [
-    "도전 생성하기", // step 0
-    "도전 기간 설정", // step 1 (제목을 살짝 바꿨어요)
+    "도전 생성하기",
+    "도전 기간 설정", // step 1
     "보상 설정하기", // step 2
-    "결제 하기", // step 3 (결제 단계 추가)
+    "보상 설정하기", // step 3 (이미지 헤더 제목도 '보상 설정하기'네요)
   ];
 
-  // [NEW] 보상 선택 화면에서 "이걸로 할게요"를 눌렀을 때 실행될 함수
   const handleRewardSelect = (product) => {
-    setSelectedReward(product); // 1. 선택한 상품 저장
-    setStep(step + 1); // 2. 다음 단계(결제)로 이동
+    setSelectedReward(product);
+    setStep(step + 1); // 보상 선택 -> 결제 화면(step 3)으로 이동
   };
 
   const renderContent = () => {
@@ -44,39 +42,21 @@ function CreateChallenge() {
           </>
         );
       case 1:
-        return (
-          <>
-            <ChallengePeriod />
-            {/* ChallengePeriod 안에 설명이 있으니 div는 지워도 됩니다 */}
-          </>
-        );
+        return <ChallengePeriod />;
       case 2:
-        // [수정됨] 여기가 핵심입니다!
-        // onSelect 속성으로 handleRewardSelect 함수를 전달해줍니다.
         return <RewardSelection onSelect={handleRewardSelect} />;
-
       case 3:
-        // [NEW] 결제 화면 (마지막 단계)
-        return (
-          <div className={styles.description}>
-            {selectedReward && (
-              <p style={{ color: "#ff6b00", fontWeight: "bold" }}>
-                선택한 보상: {selectedReward.name}
-              </p>
-            )}
-            <br />
-            친구랑 결제하는 화면입니다.
-          </div>
-        );
+        // [NEW] 결제 컴포넌트 보여주기
+        // 선택한 보상 정보(가격 등)를 넘겨줍니다.
+        return <ChallengePayment selectedReward={selectedReward} />;
       default:
         return <div>모든 단계가 끝났습니다!</div>;
     }
   };
 
   const handleNext = () => {
-    // step 3이 마지막이라고 가정
     if (step === 3) {
-      navigate("/");
+      navigate("/"); // 최종 완료 시 홈으로
     } else {
       setStep(step + 1);
     }
@@ -88,16 +68,14 @@ function CreateChallenge() {
 
       <div className={styles.container}>{renderContent()}</div>
 
-      {/* [중요 로직] 
-         step 2(보상선택)일 때는 RewardSelection 안에 자체 버튼이 있으므로,
-         바깥쪽 NextButton은 숨깁니다 (!== 2).
+      {/* step 2(보상선택)일 때는 내부 버튼을 쓰고,
+         step 3(결제)일 때는 공통 버튼을 쓰되 텍스트를 바꿉니다.
       */}
       {step !== 2 && (
         <div className={styles.bottomBar}>
           <NextButton
             onClick={handleNext}
-            // 마지막 단계(3)면 '완료하기', 아니면 '다음'
-            text={step === 3 ? "완료하기" : "다음"}
+            text={step === 3 ? "이 보상으로 도전 시작하기" : "다음"}
           />
         </div>
       )}
