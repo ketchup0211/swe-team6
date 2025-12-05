@@ -1,33 +1,49 @@
+/* 컨테이너를 그리드(격자)로 만듭니다 */
 .container {
-  position: relative;
-  display: flex;
+  display: grid;
+  /* [왼쪽버튼영역] [제목영역(나머지)] [오른쪽버튼영역] */
+  /* 양쪽 끝을 50px로 고정해서, 버튼이 없어도 그 공간을 비워둡니다 */
+  grid-template-columns: 50px 1fr 50px;
   align-items: center;
-  justify-content: center;
 
-  padding: 20px 20px 16px 20px;
-  margin-top: 46px;
+  width: 100%;
+  height: 56px; /* 네비게이션 바 높이 고정 */
+  padding: 0 10px; /* 좌우 여백 */
+  margin-top: 46px; /* 상태바 등 상단 여백 유지 */
+  box-sizing: border-box;
+  background-color: #fff; /* 배경색 명시 (필요시) */
 }
 
+/* 1번 칸: 뒤로가기 버튼 */
 .navigateButton {
-  position: absolute;
-  left: 20px;
+  grid-column: 1; /* 첫 번째 칸 차지 */
+  justify-self: start; /* 왼쪽 정렬 */
+
   border: none;
   background-color: transparent;
   cursor: pointer;
-  padding: 0;
+  padding: 10px; /* 터치 영역 확보 */
+  display: flex; /* 아이콘 수직 정렬용 */
 }
 
+/* 2번 칸: 제목 */
 .title {
+  grid-column: 2; /* 두 번째 칸 차지 */
+  justify-self: center; /* 가운데 정렬 */
+
   margin: 0;
   font-size: 16px;
   font-weight: 600;
   color: #1c1c1c;
+  white-space: nowrap; /* 글자 줄바꿈 방지 */
 }
 
-/* 오른쪽 + 버튼 래퍼 */
+/* 3번 칸: 오른쪽 버튼 */
 .rightButton {
-  position: absolute;
-  right: 20px;
+  grid-column: 3; /* 세 번째 칸 차지 */
+  justify-self: end; /* 오른쪽 정렬 */
+
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }

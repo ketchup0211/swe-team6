@@ -1,3 +1,15 @@
+.container {
+  /* 전체 페이지 배경색이 필요하면 여기에 추가 */
+  background-color: #fff;
+  min-height: 100vh;
+}
+
 .roomCardList {
-  margin: 14px 20px 0px 20px;
+  /* 상단 네비게이션바 높이만큼 띄워주는 것 잊지 마세요! (NavigateBar CSS에 따라 다름) */
+  /* NavigateBar가 fixed가 아니라면 그냥 마진만 줘도 됩니다. */
+  margin-top: 20px;
+  padding: 0 20px; /* 좌우 여백 */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 카드 사이 간격 */
 }
