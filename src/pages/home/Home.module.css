@@ -1,8 +1,26 @@
 #container {
-  background: linear-gradient(180deg, #fff5c6 0%, rgba(255, 245, 198, 0) 100%);
-  padding: 100px 20px 20px 20px;
-
+  background: linear-gradient(
+    180deg,
+    #fff5c6 0%,
+    rgba(255, 245, 198, 0) 50%
+  ); /* 그라데이션 조정 */
+  background-color: #fcfcfc; /* 아래쪽은 흰색에 가까운 배경 */
+  min-height: 100vh;
+  padding: 20px; /* 상단 패딩 조정 (MissionHeader 내부 마진 고려) */
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+/* 하단의 흰색 영역 (사진첩 + 캘린더) */
+.whiteSection {
+  background-color: white;
+  border-radius: 30px 30px 0 0; /* 위쪽만 둥글게 */
+  padding: 30px 20px 100px 20px; /* 하단 네비게이션 공간 확보 */
+  margin: 20px -20px 0 -20px; /* 부모 패딩 무시하고 꽉 채우기 위해 */
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.divider {
+  height: 40px; /* 사진첩과 캘린더 사이 간격 */
 }

@@ -1,0 +1,54 @@
+.container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+.header {
+  display: flex;
+  align-items: baseline; /* 글자 밑라인 맞추기 */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.dateLabel {
+  color: #ff6b00;
+  font-size: 12px;
+  font-weight: bold;
+}
+.title {
+  font-size: 18px;
+  margin: 0;
+  flex-grow: 1; /* 중간 공간 차지 */
+}
+.controls {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+.dayCell {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dayNumber {
+  color: #ddd; /* 기본 날짜는 회색 */
+  font-size: 14px;
+}
+.checkMark {
+  width: 36px;
+  height: 36px;
+  background-color: #ff6b00;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
