@@ -1,7 +1,9 @@
-import styles from "./MemberInfo.module.css";
-import BaseUserIcon from "../../assets/base-user-icon.svg?react";
+import { memo } from 'react';
+import PropTypes from 'prop-types';
+import styles from './MemberInfo.module.css';
+import BaseUserIcon from '../../assets/base-user-icon.svg?react';
 
-function MemberInfo({ members = [] }) {
+const MemberInfo = memo(function MemberInfo({ members }) {
   return (
     <div className={styles.container}>
       <div className={styles.profile}>
@@ -16,6 +18,14 @@ function MemberInfo({ members = [] }) {
       ))}
     </div>
   );
-}
+});
+
+MemberInfo.propTypes = {
+  members: PropTypes.arrayOf(PropTypes.string),
+};
+
+MemberInfo.defaultProps = {
+  members: [],
+};
 
 export default MemberInfo;
