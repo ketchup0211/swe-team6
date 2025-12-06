@@ -2,8 +2,7 @@ import { useState } from "react";
 import styles from "./Calendar.module.css";
 
 function Calendar() {
-  // 현재 보고 있는 달력의 연/월
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentDate] = useState(new Date());
 
   // 예시: 출석 성공한 날짜들 (일자만 저장)
   const checkedDays = [1, 15, 22];
