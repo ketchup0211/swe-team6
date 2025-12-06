@@ -1,12 +1,8 @@
-import styles from "./RoomCard.module.css";
+import { memo } from 'react';
+import PropTypes from 'prop-types';
+import styles from './RoomCard.module.css';
 
-// 나중에는 실제 이미지 URL을 받겠지만, 지금은 스타일을 위해 type으로 구분해볼게요.
-// type: 'single' (꽉 찬 네모), 'group' (4개 격자)
-export default function RoomCard({
-  title = "도전 이름",
-  subtitle = "부제목 또는 설정해놓은 공지",
-  type = "group", // 기본값은 그룹형
-}) {
+const RoomCard = memo(function RoomCard({ title, subtitle, type }) {
   return (
     <div className={styles.roomCard}>
       <div className={styles.leftContainer}>
@@ -33,8 +29,21 @@ export default function RoomCard({
         </div>
       </div>
 
-      {/* 3. 오른쪽 보상 아이콘 영역 */}
       <div className={styles.rewardIcon}></div>
     </div>
   );
-}
+});
+
+RoomCard.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  type: PropTypes.oneOf(['single', 'group']),
+};
+
+RoomCard.defaultProps = {
+  title: '도전 이름',
+  subtitle: '부제목 또는 설정해놓은 공지',
+  type: 'group',
+};
+
+export default RoomCard;
