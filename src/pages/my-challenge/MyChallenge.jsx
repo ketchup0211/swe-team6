@@ -20,9 +20,9 @@ function MyChallenge() {
         {Array.isArray(challenges) && challenges.map((challenge) => (
           <RoomCard
             key={challenge.id}
-            title={challenge.title}
-            subtitle={challenge.subtitle}
-            type={challenge.type}
+            title={challenge.name}
+            subtitle={challenge.category}
+            type={challenge.participants > 1 ? 'group' : 'single'}
           />
         ))}
       </div>

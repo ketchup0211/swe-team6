@@ -65,11 +65,11 @@ function Dashboard() {
                 onClick={() => navigate(`/challenges/${challenge.id}`)}
               >
                 <div className={styles.challengeIcon}>
-                  {challenge.type === 'group' ? '👥' : '👤'}
+                  {challenge.participants > 1 ? '👥' : '👤'}
                 </div>
                 <div className={styles.challengeInfo}>
-                  <h4 className={styles.challengeTitle}>{challenge.title}</h4>
-                  <p className={styles.challengeSubtitle}>{challenge.subtitle}</p>
+                  <h4 className={styles.challengeTitle}>{challenge.name}</h4>
+                  <p className={styles.challengeSubtitle}>{challenge.category}</p>
                 </div>
                 <div className={styles.challengeArrow}>›</div>
               </div>

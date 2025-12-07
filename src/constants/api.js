@@ -1,5 +1,5 @@
 // API Base URL
-export const API_BASE_URL = 'https://budding.onrender.com';
+export const API_BASE_URL = 'https://budding-orga.onrender.com';
 
 // API Endpoints
 export const API_ENDPOINTS = {

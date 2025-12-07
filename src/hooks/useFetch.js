@@ -7,7 +7,7 @@ export const useFetch = (url, initialData = null, options = {}) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (!url) {
+    if (!url || url.includes('null') || url.includes('undefined')) {
       setLoading(false);
       return;
     }
