@@ -11,4 +11,7 @@ export default defineConfig({
     }),
     svgr(),
   ],
+  server: {
+    port: 3000,
+  },
 });
