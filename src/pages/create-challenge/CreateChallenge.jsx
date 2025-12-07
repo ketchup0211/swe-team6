@@ -70,7 +70,7 @@ function CreateChallenge() {
       );
       if (response.ok) {
         alert('챌린지가 생성되었습니다!');
-        navigate(ROUTES.DASHBOARD);
+        navigate(ROUTES.HOME);
       } else {
         alert('첫린지 생성에 실패했습니다.');
       }
@@ -86,7 +86,7 @@ function CreateChallenge() {
     if (step === 3) {
       handleCreateChallenge();
     } else {
-      defaultHandleNext(() => navigate(ROUTES.DASHBOARD));
+      defaultHandleNext(() => navigate(ROUTES.HOME));
     }
   };
 

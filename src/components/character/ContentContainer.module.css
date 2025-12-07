@@ -44,11 +44,49 @@
 .contentList {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   text-align: start;
-  gap: 14px;
+  gap: 12px;
   flex: none;
   height: auto;
+  width: 100%;
+}
+
+.itemCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.itemCard:hover {
+  background: #f0f1f3;
+}
+
+.itemCard:active {
+  background: #e9ecef;
+}
+
+.itemCard:hover .itemIcon,
+.itemCard:active .itemIcon {
+  filter: grayscale(0%);
+}
+
+.itemIcon {
+  font-size: 32px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease;
 }
 
 .textEmphasize {
@@ -64,7 +102,7 @@
   font-weight: 600;
   letter-spacing: -0.32px;
   line-height: 1.4;
-  word-break: keep-all;
+  white-space: nowrap;
 }
 
 .textItem {
@@ -79,8 +117,7 @@
   font-weight: 500;
   letter-spacing: -0.32px;
   line-height: 1.5;
-  word-break: keep-all;
-  overflow-wrap: break-word;
+  white-space: nowrap;
 }
 
 .textContainer {
@@ -88,4 +125,6 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
+  flex: 1;
+  min-width: 0;
 }

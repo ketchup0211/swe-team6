@@ -9,6 +9,7 @@ function ShortcutButton({ name, url = "/" }) {
         url={url}
         icon={starIcon}
         iconStyle={{ width: 47, height: 47 }}
+        alwaysColor={true}
       />
     </span>
   );

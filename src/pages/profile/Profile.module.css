@@ -77,6 +77,16 @@
   padding: 16px;
   background-color: #f8f9fa;
   border-radius: 12px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.statItem:hover {
+  background-color: #e9ecef;
+}
+
+.statItem:active {
+  background-color: #dee2e6;
 }
 
 .statValue {
@@ -155,7 +165,11 @@
   user-select: none;
 }
 
+.logoutButton:hover {
+  background-color: #dc2626;
+}
+
 .logoutButton:active {
   transform: scale(0.96);
-  background-color: #dc2626;
+  background-color: #b91c1c;
 }

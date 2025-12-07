@@ -23,6 +23,10 @@ a {
   user-select: none;
 }
 
+.button:hover {
+  opacity: 0.8;
+}
+
 .button:active {
   transform: scale(0.95);
   opacity: 0.7;
@@ -32,14 +36,35 @@ a {
 .gotoIcon {
   width: 24px;
   height: 24px;
-  opacity: 0.4;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease, opacity 0.2s ease;
 }
 
 .gotoIconActive {
   opacity: 1;
+  filter: grayscale(0%);
 }
+
+/* 항상 컬러로 표시되는 아이콘 (상단 버튼용) */
+.alwaysColor {
+  opacity: 1 !important;
+  filter: grayscale(0%) !important;
+}
+
+.button:hover .gotoIcon:not(.alwaysColor) {
+  opacity: 0.7;
+  filter: grayscale(50%);
+}
+
+.button:hover .gotoIconActive {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
 .text {
-  color: #b0b0b0;
+  color: #999;
+  transition: color 0.2s ease;
 }
 
 .textActive {

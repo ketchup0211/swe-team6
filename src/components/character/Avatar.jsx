@@ -3,6 +3,7 @@ import styles from './Avatar.module.css';
 import avatar from '../../assets/avatar/avatar.png';
 import MessagePoint from '../../assets/message-point.svg?react';
 import AvatarShade from '../../assets/avatar/avatar-shade.svg?react';
+import CharacterBody from '../../assets/character-parts/Frame 1707482228.svg?react';
 import { useAuth } from '../../hooks/useAuth';
 import { useFetch } from '../../hooks/useFetch';
 import { API_ENDPOINTS } from '../../constants/api';
@@ -31,6 +32,7 @@ function Avatar() {
       </div>
 
       <div className={styles.avatarContainer}>
+        <CharacterBody className={styles.characterBody} />
         <img className={styles.avatar} src={avatar} alt="avatar" />
         <AvatarShade className={styles.avatarShade} />
       </div>

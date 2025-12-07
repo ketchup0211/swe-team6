@@ -1,16 +1,16 @@
 import { useState } from "react";
 import styles from "./ChallengePayment.module.css";
 
-// 결제 수단 데이터 (아이콘은 텍스트나 색상으로 대체했어요)
+// 결제 수단 데이터
 const PAY_METHODS = [
-  { id: "naver_money", name: "네이버페이(머니)", color: "#03C75A" },
-  { id: "naver_card", name: "네이버페이(카드)", color: "#03C75A" },
-  { id: "zero", name: "제로페이", color: "#194095" },
-  { id: "kb", name: "KB Pay", color: "#FFBC00" },
-  { id: "toss", name: "토스페이", color: "#0064FF" },
-  { id: "kakao", name: "카카오페이", color: "#FFEB00" },
-  { id: "bank", name: "내통장결제", color: "#333" },
-  { id: "payco", name: "PAYCO", color: "#FA2828" },
+  { id: "naver_money", name: "네이버페이(머니)", color: "#03C75A", icon: "N" },
+  { id: "naver_card", name: "네이버페이(카드)", color: "#03C75A", icon: "N" },
+  { id: "zero", name: "제로페이", color: "#194095", icon: "0" },
+  { id: "kb", name: "KB Pay", color: "#FFBC00", icon: "KB" },
+  { id: "toss", name: "토스페이", color: "#0064FF", icon: "₩" },
+  { id: "kakao", name: "카카오페이", color: "#FFEB00", icon: "K" },
+  { id: "bank", name: "내통장결제", color: "#4CAF50", icon: "🏦" },
+  { id: "payco", name: "PAYCO", color: "#FA2828", icon: "P" },
 ];
 
 export default function ChallengePayment({ selectedReward }) {
@@ -73,11 +73,17 @@ export default function ChallengePayment({ selectedReward }) {
               }`}
               onClick={() => setSelectedMethod(method.id)}
             >
-              {/* 아이콘 흉내 (색깔 동그라미) */}
+              {/* 결제사 아이콘 */}
               <div
                 className={styles.payIcon}
                 style={{ backgroundColor: method.color }}
-              ></div>
+              >
+                <span className={styles.iconText} style={{ 
+                  color: method.id === 'kakao' ? '#000' : '#fff'
+                }}>
+                  {method.icon}
+                </span>
+              </div>
               <span className={styles.payName}>{method.name}</span>
             </button>
           ))}

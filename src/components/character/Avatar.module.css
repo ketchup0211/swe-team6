@@ -70,6 +70,17 @@
   justify-content: center;
 }
 
+/* 캐릭터 몸통 */
+.characterBody {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  left: 50%;
+  top: 60%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
 /* 병아리 이미지 */
 .avatar {
   width: 250px; /* 여기 값 마음대로 바꿔도 가운데 유지됨 */

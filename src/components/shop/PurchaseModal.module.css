@@ -1,0 +1,155 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 20px;
+  padding: 32px 24px;
+  max-width: 360px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* 아이템 미리보기 */
+.itemPreview {
+  width: 120px;
+  height: 120px;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.itemIcon {
+  width: 100px;
+  height: 100px;
+}
+
+/* 아이템 이름 */
+.itemName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+/* 메시지 */
+.message {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.highlight {
+  color: #ff6b00;
+  font-weight: 600;
+}
+
+/* 포인트 정보 */
+.pointInfo {
+  width: 100%;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.pointRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.pointValue {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.pointIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* 버튼 */
+.buttons {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.cancelButton,
+.confirmButton {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.cancelButton {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.cancelButton:hover {
+  background-color: #e0e0e0;
+}
+
+.cancelButton:active {
+  transform: scale(0.98);
+}
+
+.confirmButton {
+  background-color: #ff6b00;
+  color: white;
+}
+
+.confirmButton:hover:not(:disabled) {
+  background-color: #ff8a33;
+}
+
+.confirmButton:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.confirmButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* 에러 메시지 */
+.errorMessage {
+  font-size: 13px;
+  color: #f44336;
+  margin-top: 12px;
+  margin-bottom: 0;
+}

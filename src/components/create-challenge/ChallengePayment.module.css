@@ -138,10 +138,19 @@
 }
 
 .payIcon {
-  width: 20px;
-  height: 14px;
-  border-radius: 2px;
-  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconText {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .payName {

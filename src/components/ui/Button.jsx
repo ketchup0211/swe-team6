@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './Button.module.css';
 
-const Button = memo(function Button({ name, url, icon, activeIcon, iconStyle, isActive }) {
+const Button = memo(function Button({ name, url, icon, activeIcon, iconStyle, isActive, alwaysColor }) {
   const iconSrc = isActive && activeIcon ? activeIcon : icon;
 
   return (
@@ -17,7 +17,7 @@ const Button = memo(function Button({ name, url, icon, activeIcon, iconStyle, is
             <img
               className={`${styles.gotoIcon} ${
                 isActive ? styles.gotoIconActive : ''
-              }`}
+              } ${alwaysColor ? styles.alwaysColor : ''}`}
               src={iconSrc}
               alt={name || 'button icon'}
               style={iconStyle}
@@ -41,6 +41,7 @@ Button.propTypes = {
   activeIcon: PropTypes.string,
   iconStyle: PropTypes.object,
   isActive: PropTypes.bool,
+  alwaysColor: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -49,6 +50,7 @@ Button.defaultProps = {
   activeIcon: null,
   iconStyle: null,
   isActive: true,
+  alwaysColor: false,
 };
 
 export default Button;

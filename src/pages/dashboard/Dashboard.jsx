@@ -4,6 +4,8 @@ import { useAuth } from '../../hooks/useAuth';
 import { useFetch } from '../../hooks/useFetch';
 import { API_ENDPOINTS } from '../../constants/api';
 import { MOCK_CHALLENGE_LIST } from '../../constants/mockData';
+import avatar from '../../assets/avatar/avatar.png';
+import pointIcon from '../../assets/point-icon.png';
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -27,11 +29,11 @@ function Dashboard() {
       {/* 상단 프로필 요약 */}
       <div className={styles.header}>
         <div className={styles.userSection}>
-          <div className={styles.avatar}>🌱</div>
+          <img src={avatar} alt="캐릭터" className={styles.avatar} />
           <div className={styles.userInfo}>
             <h2 className={styles.greeting}>안녕하세요!</h2>
             <p className={styles.pointBadge}>
-              <span className={styles.pointIcon}>⭐</span>
+              <img src={pointIcon} alt="포인트" className={styles.pointIcon} />
               {userPoint} 포인트
             </p>
           </div>
@@ -64,9 +66,7 @@ function Dashboard() {
                 className={styles.challengeCard}
                 onClick={() => navigate(`/challenges/${challenge.id}`)}
               >
-                <div className={styles.challengeIcon}>
-                  {challenge.participants > 1 ? '👥' : '👤'}
-                </div>
+                <img src={avatar} alt="캐릭터" className={styles.challengeIcon} />
                 <div className={styles.challengeInfo}>
                   <h4 className={styles.challengeTitle}>{challenge.name}</h4>
                   <p className={styles.challengeSubtitle}>{challenge.category}</p>
@@ -77,7 +77,7 @@ function Dashboard() {
           </div>
         ) : (
           <div className={styles.emptyState}>
-            <p className={styles.emptyIcon}>🎯</p>
+            <img src={avatar} alt="캐릭터" className={styles.emptyIcon} />
             <p className={styles.emptyText}>아직 도전이 없어요</p>
             <button
               className={styles.createButton}
@@ -95,14 +95,14 @@ function Dashboard() {
           className={styles.actionButton}
           onClick={() => navigate('/challenges/create')}
         >
-          <span className={styles.actionIcon}>➕</span>
+          <img src={avatar} alt="도전" className={styles.actionIcon} />
           새 도전 만들기
         </button>
         <button
           className={styles.actionButton}
           onClick={() => navigate('/shop')}
         >
-          <span className={styles.actionIcon}>🛍️</span>
+          <img src={avatar} alt="상점" className={styles.actionIcon} />
           상점 방문하기
         </button>
       </section>

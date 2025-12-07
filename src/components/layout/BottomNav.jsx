@@ -10,7 +10,7 @@ function BottomNav() {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  const isHomeActive = currentPath === ROUTES.DASHBOARD;
+  const isHomeActive = currentPath === ROUTES.HOME;
   const isChallengesActive = currentPath.startsWith('/challenges');
   const isProfileActive = currentPath === ROUTES.PROFILE;
 
@@ -18,7 +18,7 @@ function BottomNav() {
     <div className={styles.bottomNav}>
       <Button
         name="홈"
-        url={ROUTES.DASHBOARD}
+        url={ROUTES.HOME}
         isActive={isHomeActive}
         icon={home}
       />

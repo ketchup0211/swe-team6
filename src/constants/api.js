@@ -26,7 +26,8 @@ export const API_ENDPOINTS = {
 
   // Challenge 관련 엔드포인트 (내 챌린지 확인/생성, 인증업로드, 참가자 리스트/카운트)
   CHALLENGE: {
-    GET_BY_USER: (userId) => `/challenges/${userId}`, // GET
+    GET_BY_USER: (userId) => `/challenges/user/${userId}`, // GET: 사용자의 챌린지 목록
+    GET_DETAIL: (challengeId) => `/challenges/${challengeId}`, // GET: 챌린지 상세 정보
     CREATE_FOR_USER: (userId) => `/challenges/${userId}`, // POST
     CREATE_CERTIFICATION: (challengeId) => `/challenges/${challengeId}/certifications`, // POST
     GET_PARTICIPANTS_LIST: (challengeId) => `/challenges/${challengeId}/participants/List`, // GET

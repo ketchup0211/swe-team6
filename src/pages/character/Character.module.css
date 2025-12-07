@@ -7,9 +7,9 @@
       rgba(255, 255, 255, 0.5)
     ),
     url("../../assets/avatar/background/background-1.png");
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
   padding: 20px 0 100px 0;
 }
 
@@ -38,9 +38,13 @@
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(4px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   user-select: none;
+}
+
+.pointContainer:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .pointContainer:active {
@@ -48,8 +52,8 @@
 }
 
 .pointIcon {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
   aspect-ratio: 1/1;
 }

@@ -16,7 +16,7 @@ function Home() {
   
   // 챌린지 상세 정보 조회
   const { data } = useFetch(
-    challengeId ? `/challenges/${challengeId}` : null,
+    challengeId ? API_ENDPOINTS.CHALLENGE.GET_DETAIL(challengeId) : null,
     MOCK_HOME_DATA
   );
 
